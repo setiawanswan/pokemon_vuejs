@@ -6,14 +6,14 @@
       v-model="text"
     >
   </div>
-  <div class="mt-10 p-4 flex flex-wrap justify-center">
+  <div class="mt-10 p-4 grid grid-flow-col grid-cols-3 grid-rows-5 gap-4 justify-center">
     <div 
       class="ml-4 text-2x text-blue-500"
       v-for="(pokemon, idx) in filteredPokemon"
       :key="idx"
     >
     <router-link :to="`/about/${urlIdLookUp[pokemon.name]}`">
-        {{ pokemon.name }}
+        {{ pokemon.name }} 
     </router-link>
     </div>
   </div>
